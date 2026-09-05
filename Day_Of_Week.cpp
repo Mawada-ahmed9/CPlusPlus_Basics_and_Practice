@@ -10,21 +10,7 @@ int ReadNumber(){
     return n;
 }
 endays check(int n){
-    if (n == 1){
-        return endays::sun;
-    }else if (n == 2){
-        return endays::mon;
-    }else if (n == 3){
-        return endays::tue;
-    }else if (n == 4){
-        return endays::wen;
-    }else if (n == 5){
-        return endays::thr;
-    }else if (n == 6){
-        return endays::fri;
-    }else{
-        return endays::str;
-    }
+    return endays(n);
 }
 void PrintDays(endays myday){
     switch (myday)
