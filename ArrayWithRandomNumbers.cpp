@@ -12,13 +12,13 @@ int ReadPositiveNumber(string massage){
     } while (number <= 0);
     return number;   
 }
-int FillArrayWithRandomNumbers(int from, int to){
+int RandomNumber(int from, int to){
     return rand()% (to - from +1) + from;
 }
-void ReadArray(int array[100],int number){
+void FillArrayWithRandomNumbers(int array[100],int number){
     
     for (int i = 0; i < number; i++){
-        array[i] = FillArrayWithRandomNumbers(1, 100);   
+        array[i] =RandomNumber(1, 100);   
     }
 }
 void Printarrays(int array[100],int number){
@@ -30,9 +30,9 @@ int main (){
     srand((unsigned)time(NULL));
     int array[100] , number;
     number= ReadPositiveNumber("enter your number: ");
-    ReadArray(array, number);
+    FillArrayWithRandomNumbers(array, number);
     Printarrays(array, number);
-       
+    
     return 0;
     
 } 
